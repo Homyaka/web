@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Sign Up Form</title>
-    <link rel="stylesheet" href="/styles/loginstyle.css">
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+    <link rel="stylesheet" href="styles/loginformstyle.css">
 </head>
+
 <body>
-<a> href="/">Back</a>
-<form class="sign-up">
-    <h1 class="sign-up-title">Registration</h1>
-    <input type="text" class="sign-up-input" placeholder="What's your username?" autofocus> <br>
-    <input type="password" class="sign-up-input" placeholder="Choose a password"> <br>
-    <input type="password" class="sign-up-input" placeholder="Repeat a password"> <br>
-    <input type="submit" value="Sign me up!" class="sign-up-button"> <br>
+<a href="/">Back</a> <br>
+<form class='login-form'>
+    <div class="flex-row logo">
+        <h1>LOGO</h1>
+    </div>
+    <div class="flex-row">
+        <input id="username" class='lf--input' placeholder='Create your username' type='text'>
+    </div>
+    <div class="flex-row">
+        <input id="password" class='lf--input' placeholder='Create a password' type='password'>
+    </div>
+    <div class="flex-row">
+        <input id="rep_password" class='lf--input' placeholder='Repeat a password' type='password'>
+    </div>
+    <input class='lf--submit' type='submit' value='Sign Up'>
+    <a class='lf--forgot' href='#'>Already throwing balls? Log In</a>
 </form>
 </body>
 </html>
