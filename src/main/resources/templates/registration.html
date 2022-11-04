@@ -5,24 +5,19 @@
     <title>Login Form</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-
-
     <link rel="stylesheet" href="styles/loginformstyle.css">
 </head>
 
 <body>
-<form class='login-form'>
+<form action="/registration" method="post" class='login-form'>
     <div class="flex-row logo">
         <h1>LOGO</h1>
     </div>
     <div class="flex-row">
-        <input id="username" class='lf--input' placeholder='Create your username' type='text'>
+        <input name="username" id="username" class='lf--input' placeholder='Create your username' type='text'>
     </div>
     <div class="flex-row">
-        <input id="password" class='lf--input' placeholder='Create a password' type='password'>
-    </div>
-    <div class="flex-row">
-        <input id="rep_password" class='lf--input' placeholder='Repeat a password' type='password'>
+        <input name="password" id="password" class='lf--input' placeholder='Create a password' type='password'>
     </div>
     <input class='lf--submit' type='submit' value='Sign Up'>
     <a class='lf--forgot' href='#'>Already throwing balls? Log In</a>

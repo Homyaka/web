@@ -7,20 +7,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class MainController {
-
+public class UsersController {
     @Autowired
     private UserRepository userRepository;
     @Autowired
-   private CurrentUserRepository currentUserRepository;
+    private CurrentUserRepository currentUserRepository;
 
-    @GetMapping("/")
-    public String main(Model model) {
-        Iterable<CurrentUser> cUser=currentUserRepository.findAll();
-        model.addAttribute("currentUser");
-        return "home";
+    @GetMapping("/users")
+    public String user(Model model){
+        Iterable<User> users=userRepository.findAll();
+        model.addAttribute("users",users);
+        return "users";
+    }
+    @PostMapping("/users")
+    public String delUser(Model model){
+        return "users";
     }
 }

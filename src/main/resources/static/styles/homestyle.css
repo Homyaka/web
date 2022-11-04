@@ -65,7 +65,9 @@ body {
  /* background-image: url("../../gradient.jpg");*/
   text-align: center;
 }
-
+.show_user{
+ margin-top: 20px;
+ }
 .container {
   margin: 0 auto;
   width: 540px;

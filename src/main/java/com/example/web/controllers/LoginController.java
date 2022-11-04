@@ -23,14 +23,6 @@ public class LoginController {
     public String log( Model model) {;
         return "login";
     }
-    @GetMapping("/home")
-    public String home( Model model) {;
-        return "home";
-    }
-   /* @GetMapping("/loginIn")
-    public String loginIn(Model model) {
-        return "loginIn";
-    }*/
 
     @PostMapping("/login")
     public String loginIn(@RequestParam String username, @RequestParam String password,  Model model){
@@ -42,6 +34,8 @@ public class LoginController {
             if (u.getLogin().equals(username)) {
                 if (u.getPassword().equals(password)) {
                     curUser.setCurrentUser(username);
+                    currentUserRepository.deleteAll();
+                    currentUserRepository.save(curUser);
                     return "redirect:/";
                 }
                 else {
