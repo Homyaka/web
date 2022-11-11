@@ -8,7 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Dark Navigation</title>
     <link rel="stylesheet" href="styles/homestyle.css">
-    <link rel="stylesheet" href="styles/loginformstyle.css">
     <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
@@ -29,12 +28,17 @@
     <h6 th:text="${el.login}"/>
     <h6 th:text="${el.password}"/>
 </div>
-<div action="/users" method="post">
+<form action="/users/new" method="post">
     <h1>Create User</h1>
-    <input name="createuser" class='lf--input' placeholder='Create users login' type='text'>
-    <input name="createpassword" class='lf--input' placeholder='Create password' type="text">
-    <input name="useraction" class='lf--input' placeholder='Enter actions' type="text">
+    <input name="createuser" class='lf--input' placeholder='Create users login' type='text'> <br>
+    <input name="createpassword" class='lf--input' placeholder='Create password' type="text"> <br>
+    <input name="useraction" class='lf--input' placeholder='Enter actions' type="text"> <br>
     <input class='lf--submit' type='submit' value='Create'>
-</div>
+</form>
+<form action="/users/del" method="post">
+    <h1>Delete User</h1>
+    <input name="deluser" class='lf--input' placeholder='Enter username' type='text'> <br>
+    <input class='lf--submit' type='submit' value='Delete'>
+</form>
 </body>
 </html>

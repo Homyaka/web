@@ -52,10 +52,13 @@ public class User {
         this.login = login;
         this.password = password;
     }
-
     public User(String login, String password, String actions) {
         this.login = login;
         this.password = password;
         this.actions=actions;
+    }
+
+    public User(String login) {
+        this.login = login;
     }
 }

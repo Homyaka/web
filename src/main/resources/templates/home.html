@@ -22,8 +22,13 @@
         </div>
     </nav>
 </header>
-<form th:each="el:${currentUser}">
+<div th:each="el:${currentUser}">
     <h6 th:text="${el}"/>
+</div>
+<form>
+    <h1 th:text="${sayname}"/>
+    <input name="outputname" class='lf--input' placeholder='enter your name' type='text'> <br>
+    <input class='lf--submit' type='submit' value='Say hello'>
 </form>
 </body>
 </html>

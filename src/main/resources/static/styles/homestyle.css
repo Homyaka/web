@@ -56,7 +56,7 @@ table {
  */
 body {
   font: 30px/32px 'Lucida Grande', Tahoma, Verdana, sans-serif;
-  color: #A3E4D7;
+  color: #00B27C   ;
   font-family: inherit;
   height: 100%;
   background: rgb(0,0,0);
@@ -154,3 +154,43 @@ nav li.purple a, nav li.purple a:active {
 nav li.yellow a, nav li.yellow a:active {
   border-bottom-color: #c0bb30;
 }
+.lf--input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1em 2em;
+  margin-bottom: 15px;
+  border: 0;
+  width: 50%;
+  box-sizing: border-box;
+  color: #ABEBC6;
+  font-size: 0.8rem;
+  font-family: Open Sans, Arial, sans-serif;
+  text-shadow: 1px 1px 1px #232323;
+  border-radius: 25px;
+  background: #1A5276;
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #1A5276), color-stop(100%, #8E44AD));
+  background: -webkit-linear-gradient(top, #1A5276 0%, #8E44AD 100%);
+  background: linear-gradient(to bottom, #1A5276 0%, #8E44AD 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc3220', endColorstr='#fa5846', GradientType=0 );
+}
+ form{
+  margin-bottom: 30px;
+  margin-left:25%;
+  margin-right: 25%;
+  background-color: #7317B6;
+  border-radius: 25px;
+  border-style:solid;
+  border-color:  #7F0EAD  ;
+  border-width: 2px
+ }
+ .lf--submit{
+  margin-bottom: 10px;
+  border-radius: 15px ;
+  border-radius: 15px;
+  border-style:solid;
+  border-color:  #7F0EAD  ;
+  border-width: 2px;
+  background-color:#7F0EAD;
+  color: #0FA091 ;
+ }
