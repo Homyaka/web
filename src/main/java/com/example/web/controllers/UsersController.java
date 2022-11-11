@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class UsersController {
@@ -23,7 +24,9 @@ public class UsersController {
         return "users";
     }
     @PostMapping("/users")
-    public String delUser(Model model){
+    public String delUser(@RequestParam String createuser,@RequestParam String createpassword,@RequestParam String useraction, Model model){
+        User newUser= new User(createuser,createpassword,useraction);
+        userRepository.save(newUser);
         return "users";
     }
 }

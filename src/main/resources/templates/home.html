@@ -22,11 +22,8 @@
         </div>
     </nav>
 </header>
-<form action="/users" method="post" class>
-    <h6 name="currentuser"/>
-</form>
 <form th:each="el:${currentUser}">
-    <h6 th:text="${el.currentUser}"/>
+    <h6 th:text="${el}"/>
 </form>
 </body>
 </html>

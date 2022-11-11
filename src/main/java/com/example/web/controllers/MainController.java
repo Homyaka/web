@@ -20,7 +20,16 @@ public class MainController {
     @GetMapping("/")
     public String main(Model model) {
         Iterable<CurrentUser> cUser=currentUserRepository.findAll();
-        model.addAttribute("currentUser");
+        String currentUser=null;
+        for (CurrentUser u:cUser) {
+            currentUser=u.getCurrentUser();
+        }
+        if(cUser!=null) {
+            model.addAttribute("currentUser", "Hello "+ currentUser);
+        }
+        else {
+            model.addAttribute("currentUser","");
+        }
         return "home";
     }
 }
