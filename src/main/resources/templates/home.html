@@ -25,10 +25,13 @@
 <div th:each="el:${currentUser}">
     <h6 th:text="${el}"/>
 </div>
-<form>
-    <h1 th:text="${sayname}"/>
-    <input name="outputname" class='lf--input' placeholder='enter your name' type='text'> <br>
-    <input class='lf--submit' type='submit' value='Say hello'>
+<form action="/dosomething" method="post" class="dosomething">
+    <h3>Write Something</h3>
+    <div class="userstext">
+    <h3 th:text="${writentext}"/>
+    </div>
+    <input name="writesomething" class='lf--input' placeholder='Write Something' type='text'> <br>
+    <input class='lf--submit' type='submit' value='Say'>
 </form>
 </body>
 </html>

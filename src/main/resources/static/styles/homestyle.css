@@ -187,10 +187,30 @@ nav li.yellow a, nav li.yellow a:active {
  .lf--submit{
   margin-bottom: 10px;
   border-radius: 15px ;
-  border-radius: 15px;
   border-style:solid;
   border-color:  #7F0EAD  ;
   border-width: 2px;
   background-color:#7F0EAD;
   color: #0FA091 ;
+ }
+ .dosomething{
+ margin-top:100px;
+ }
+ .userstext{
+   border-radius: 15px ;
+   border-style:solid;
+   border-color: #8b0000  ;
+   background-color: #a52a2a;
+   border-width: 2px;
+   margin-left:40px;
+   margin-right:40px;
+ }
+ .show_user{
+  border-radius: 15px ;
+    border-style:solid;
+    border-color: #8b0000  ;
+    background-color: #a52a2a;
+    border-width: 2px;
+    margin-left:30%;
+    margin-right:30%;
  }

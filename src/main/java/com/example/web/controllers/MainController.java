@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -30,6 +31,24 @@ public class MainController {
         else {
             model.addAttribute("currentUser","");
         }
+        return "home";
+    }
+
+    @PostMapping("/dosomething")
+    public String doSomething(@RequestParam String writesomething, Model model){
+        Iterable<CurrentUser> cUser=currentUserRepository.findAll();
+        String currentUser=null;
+        for (CurrentUser u:cUser) {
+            currentUser=u.getCurrentUser();
+        }
+        if(cUser!=null) {
+            model.addAttribute("currentUser", "Hello "+ currentUser);
+        }
+        else {
+            model.addAttribute("currentUser","");
+        }
+        String text=writesomething;
+        model.addAttribute("writentext",text);
         return "home";
     }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html xmlns:th="http://www.thymeleaf.org" >
 <head>
     <meta charset="UTF-8">
     <title>Login Form</title>
@@ -15,11 +15,11 @@
     <div class="flex-row">
         <input name="username" id="username" class='lf--input' placeholder='Your username' type='text'>
     </div>
+    <h3 th:text="${numpassword}"/>
     <div class="flex-row">
         <input name="password" id="password" class='lf--input' placeholder='Your password' type='password'>
     </div>
     <input class='lf--submit' type='submit' value='Sign Up'>
-    <a class='lf--forgot' href='#'>Already throwing balls? Log In</a>
 </form>
 </body>
 </html>

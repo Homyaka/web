@@ -21,10 +21,9 @@ public class RegistrationController {
     @PostMapping("/registration")
     public String registration(@RequestParam String username, @RequestParam String password,  Model model){
         Iterable<User> UserList= userRepository.findAll();
+        if (password.length()!=8) {return "registration";}
         for (User u:UserList) {
-            if (u.getLogin().equals(username)) {
-                return "registration";
-            }
+            if (u.getLogin().equals(username)) {return "registration";}
         }
         User newUser=new User(username,password,"Outputname");
         userRepository.save(newUser);

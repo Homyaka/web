@@ -25,10 +25,13 @@ public class UsersController {
         Iterable<User> users=userRepository.findAll();
         for(CurrentUser cu:cUser)
         {
-            
+        if (cu.getCurrentUser().equals("admin")){
+            model.addAttribute("users",users);
+            return "users";
         }
-        model.addAttribute("users",users);
-        return "users";
+        }
+       // model.addAttribute("users",users);
+        return "redirect:/";
     }
     @GetMapping("users/del")
     public String delUser(Model model){ return "users";}
@@ -36,7 +39,7 @@ public class UsersController {
     public String newUser(Model model){ return "users";}
     @PostMapping("/users/new")
     public String newUser(@RequestParam String createuser,@RequestParam String createpassword,@RequestParam String useraction, Model model){
-        if(createuser!=null && createpassword!=null) {
+        if(createuser!=null && createpassword!=null && createpassword.length()==8) {
             User newUser = new User(createuser, createpassword, useraction);
             userRepository.save(newUser);
         }
